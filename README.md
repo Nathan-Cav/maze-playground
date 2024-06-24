@@ -15,7 +15,7 @@ Configuration for defining the maze is located in `./maze_configs`. The numbers 
 
 Walls are defined by every even row and column in the maze.
 
-## Direction
+### Direction
 
 The current cell moves in a particular direction which can change when `turnLeft()` and `turnRight()` are called. This direction is defined using the `currDirection` variable which is between 0-3. The directions are defined as
 
@@ -26,7 +26,7 @@ The current cell moves in a particular direction which can change when `turnLeft
 3: West
 ```
 
-The `currDirection` variable is needed to define the starting direction of the cell. If not defined, it will default to North.
+The starting direction of the cell must be defined with the `currDirection` variable in `./maze_configs`.
 
 ## Movement Functions
 

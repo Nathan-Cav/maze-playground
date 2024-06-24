@@ -13,13 +13,13 @@ let currCell = {
 
 /**
  * Check whether the adjacent cell is a wall
- * @param {string} Direction to check wall
+ * @param {string} Direction to check wall (either "front", "left", "right")
  * @returns {void}
  */
 function isWall(direction) {
     let newCell = currCell;
     switch (direction) {
-        case "forward":
+        case "front":
             newCell = getForwardIndex();
             break;
         case "left":

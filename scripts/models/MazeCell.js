@@ -18,6 +18,10 @@ class MazeCell {
         if (this.cellType === 0) {
             this.cellType = (isColWall || isRowWall) ? 0 : 1
         }
+        // All corner walls should be walls
+        if (this.isColWall && this.isRowWall) {
+            this.cellType = 0;
+        }
     }
 
     isWall() {

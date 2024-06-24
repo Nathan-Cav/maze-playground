@@ -3,15 +3,6 @@
  * @description Get cell in given direction relative to the direction we're currently facing
  */
 
-/**
- * Directions
- * North: 0
- * East: 1
- * South: 2
- * West: 3
- */
-let currDirection = 0;
-
 function getForwardIndex() {
     switch (currDirection) {
         case 0:
