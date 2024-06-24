@@ -52,18 +52,22 @@ function moveForward() {
         return;
     }
     // Move forward twice so we're not in a wall
+    console.log("Move Forward");
     currCell = getForwardIndex();
     currCell = getForwardIndex();
 }
 
 function turnLeft() {
+    console.log("Turn Left");
     currDirection = mod((currDirection - 1), 4);
 }
 
 function turnRight() {
+    console.log("Turn Right");
     currDirection = mod((currDirection + 1), 4);
 }
 
 function turnAround() {
+    console.log("Turn Around");
     currDirection = mod((currDirection + 2), 4);
 }
