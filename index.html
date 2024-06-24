@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Title: Maze Playground
+Author: Nathan Cavalli
+Date Started: 24/06/2024
+Description: I'll let you know when I know more of what I am doing
+-->
+
+<html lang="en">
+	<head>
+		<title>Maze Playground</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.js"></script>
+
+		<!-- Config file for Maze -->
+		<script src="./maze_configs/config.js"></script>
+
+		<!-- Scripts to run Maze -->
+		<script src="./scripts/models/MazeCell.js"></script>
+		<script src="./scripts/direction.js"></script>
+		<script src="./scripts/movement.js"></script>
+		<script src="./scripts/sketch.js"></script>
+
+		<!-- Algorithm file for maze -->
+		<script src="./algorithms/algorithm.js"></script>
+
+
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body, html {
+				height:100%;
+			}
+
+			.p5Canvas {
+				/* background-color: black; */
+				position:absolute;
+				top: 0px;
+				left: 0px;
+				width:100%;
+				height:100%;
+			}
+		</style>
+
+	</head>
+	<body>
+		<main></main>
+
+		<noscript>Please enable Javascript to run this app.</noscript>
+	</body>
+</html>
