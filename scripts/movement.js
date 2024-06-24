@@ -57,13 +57,13 @@ function moveForward() {
 }
 
 function turnLeft() {
-    currDirection = ((currDirection - 1) % 4);
+    currDirection = mod((currDirection - 1), 4);
 }
 
 function turnRight() {
-    currDirection = ((currDirection + 1) % 4);
+    currDirection = mod((currDirection + 1), 4);
 }
 
 function turnAround() {
-    currDirection = ((currDirection + 2) % 4);
+    currDirection = mod((currDirection + 2), 4);
 }

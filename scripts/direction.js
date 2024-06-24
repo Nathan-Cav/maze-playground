@@ -56,3 +56,7 @@ function getRightIndex() {
             return { y: 0, x: 0 };
     }
 }
+
+function mod(n, m) {
+    return ((n % m) + m) % m;
+}

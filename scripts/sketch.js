@@ -33,7 +33,7 @@ function draw() {
 	stroke(color(255));
 	strokeWeight(1);
 
-	const density = size/objectMaze.length;
+	const density = size / objectMaze.length;
 	const wallThickness = density / 8;
 	const cellThickness = density * 2;
 
@@ -68,18 +68,7 @@ function draw() {
 			}
 			if (y == currCell.y && x == currCell.x) {
 				color = "red";
-				// Display the current direction
-				// fill(0);
-				// triangle(
-				// 	cellThickness * 0.25,
-				// 	cellThickness * 0.75,
-				// 	cellThickness * 0.5,
-				// 	cellThickness * 0.25,
-				// 	cellThickness * 0.75,
-				// 	cellThickness * 0.75
-				// );
 			}
-
 			fill(color);
 			rect(
 				xOffset,
@@ -87,6 +76,58 @@ function draw() {
 				(colWall) ? wallThickness : cellThickness,
 				(rowWall) ? wallThickness : cellThickness
 			);
+			if (y == currCell.y && x == currCell.x) {
+				// Display the current direction
+				fill(0);
+				translate(xOffset, yOffset);
+				switch (currDirection) {
+					// North
+					case 0:
+						triangle(
+							cellThickness * 0.25,
+							cellThickness * 0.75,
+							cellThickness * 0.5,
+							cellThickness * 0.25,
+							cellThickness * 0.75,
+							cellThickness * 0.75
+						);
+						break;
+					// East
+					case 1:
+						triangle(
+							cellThickness * 0.75,
+							cellThickness * 0.5,
+							cellThickness * 0.25,
+							cellThickness * 0.25,
+							cellThickness * 0.25,
+							cellThickness * 0.75
+						);
+						break;
+					// South
+					case 2:
+						triangle(
+							cellThickness * 0.25,
+							cellThickness * 0.25,
+							cellThickness * 0.75,
+							cellThickness * 0.25,
+							cellThickness * 0.5,
+							cellThickness * 0.75
+						);
+						break;
+					// West
+					case 3:
+						triangle(
+							cellThickness * 0.25,
+							cellThickness * 0.5,
+							cellThickness * 0.75,
+							cellThickness * 0.25,
+							cellThickness * 0.75,
+							cellThickness * 0.75
+						);
+						break;
+				}
+				translate(-xOffset, -yOffset);
+			}
 			xOffset += (colWall) ? wallThickness : cellThickness;
 		}
 		yOffset += (rowWall) ? wallThickness : cellThickness;
