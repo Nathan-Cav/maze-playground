@@ -78,7 +78,7 @@ function draw() {
 			);
 			if (y == currCell.y && x == currCell.x) {
 				// Display the current direction
-				fill(0);
+				fill(255);
 				translate(xOffset, yOffset);
 				switch (currDirection) {
 					// North
