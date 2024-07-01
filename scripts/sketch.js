@@ -35,7 +35,7 @@ function draw() {
 
 	const density = size / objectMaze.length;
 	const wallThickness = density / 8;
-	const cellThickness = density * 2;
+	const cellThickness = density * 2.092;
 
 	let yOffset = 0;
 	for (let y = 0; y < objectMaze.length; y++) {
