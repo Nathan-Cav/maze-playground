@@ -1,6 +1,6 @@
 # Maze Playground
 
-Webpage application for testing maze algorithms. Maze algorithms are defined in `./algorithms`.
+Webpage application for testing maze algorithms. Maze algorithms are defined in `./algorithms`. The application can be run by opening `index.html` in the browser.
 
 ## Config
 
